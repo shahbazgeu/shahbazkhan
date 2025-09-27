@@ -1,0 +1,279 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+// This is a single-file React component portfolio built with Tailwind CSS classes.
+// Default export is the Portfolio component. Drop this into a Next.js or CRA project
+// (Tailwind and framer-motion must be installed). Uses simple, modern layout and
+// is ready to be customized further.
+
+export default function Portfolio() {
+  const contact = {
+    name: "Shahbaz Khan",
+    email: "khanshahbaz2795@gmail.com",
+    location: "Dehradun, Uttarakhand, IN",
+    linkedin: "https://linkedin.com/in/shahbazkhan0101",
+  };
+
+  const summary = `Highly skilled Senior Product Support Engineer with 5+ years of experience in providing comprehensive technical support for CPaaS and SaaS-based products. Proficient in debugging codes, resolving complex issues, and delivering exceptional customer service via different methods. Seeking a challenging position where I can utilise my technical expertise to enhance product performance and customer satisfaction.`;
+
+  const experience = [
+    {
+      company: "Singular",
+      title: "Product Support Engineer",
+      period: "July 2024 — Present",
+      bullets: [
+        "Assist customers and internal teams regarding product functionality, troubleshooting, and configuration issues.",
+        "Communicate effectively with clients to understand their needs, gather feedback, and address concerns promptly.",
+        "Investigate and resolve technical problems, working closely with engineering teams to escalate and track issues as needed.",
+      ],
+    },
+    {
+      company: "Plivo",
+      title: "Product Support Engineer",
+      period: "Aug 2022 — July 2024",
+      bullets: [
+        "Conducted in-depth analysis and debugging of software issues, including code reviews and troubleshooting complex problems to identify root causes.",
+        "Acted as the primary point of contact for Level 3 support, handling escalated customer issues.",
+        "Led the resolution of critical and high-impact technical issues by coordinating with development teams.",
+        "Authored and maintained knowledge base articles, confluence docs, troubleshooting guides, and FAQs.",
+        "Mentored and coached junior support engineers.",
+      ],
+    },
+    {
+      company: "WebEngage",
+      title: "Senior Product Support Engineer",
+      period: "Aug 2021 — Aug 2022",
+      bullets: [
+        "Provided advanced technical support for CPaaS product: messaging, voice and video issues.",
+        "Collaborated closely with product development to identify and fix software bugs.",
+        "Investigated customer issues using logs and network traces.",
+      ],
+    },
+    {
+      company: "Tecomella",
+      title: "Senior Product Support Specialist",
+      period: "Nov 2018 — Jul 2021",
+      bullets: [
+        "Managed customer queries using ticketing tools, live chat, email and calls.",
+        "Resolved customer escalations and handled multiple critical projects concurrently.",
+        "Proactively identified and troubleshot complex, service-impacting issues.",
+      ],
+    },
+  ];
+
+  const skills = {
+    programming: ["Java", "Python", "C++", "JavaScript", "PHP", "REST API", "XML"],
+    tools: [
+      "ElasticSearch / OpenSearch",
+      "Datadog",
+      "Wireshark",
+      "Postman",
+      "GitHub",
+      "Kibana",
+    ],
+    os: ["Windows", "macOS", "Linux/Unix"],
+    db: ["MySQL", "Oracle", "Postgres"],
+    ticketing: ["Asana", "Jira", "Zendesk", "Intercom", "Crisp Chat"],
+    networking: ["TCP/IP", "HTTP", "RTP", "SIP", "CCNA"],
+  };
+
+  const education = {
+    degree: "B.Tech (CSE)",
+    year: "2013 — 2017",
+    college: "Graphic Era University, Dehradun, Uttarakhand, IN",
+  };
+
+  const certifications = [
+    { title: "CCNA", issuer: "CETPA Pvt Ltd", note: "45 Days" },
+  ];
+
+  const achievements = [
+    "Consistently achieved high customer satisfaction ratings.",
+    "Helped implement a support ticket categorization system, reducing response times by 20%.",
+    "Led a team that resolved a critical system outage preventing substantial revenue loss.",
+    "Recognized as a monthly performer several times.",
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-900 p-6 md:p-12 font-sans">
+      <div className="max-w-5xl mx-auto">
+        {/* Header / Hero */}
+        <motion.header
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="bg-white rounded-2xl shadow-md p-6 md:p-10 flex flex-col md:flex-row items-start md:items-center gap-6"
+        >
+          <div className="flex-shrink-0 w-24 h-24 rounded-full bg-gradient-to-tr from-indigo-500 via-violet-500 to-pink-500 flex items-center justify-center text-white text-2xl font-bold">
+            SK
+          </div>
+
+          <div className="flex-1">
+            <h1 className="text-2xl md:text-3xl font-semibold">{contact.name}</h1>
+            <p className="mt-2 text-sm md:text-base text-slate-600">{summary}</p>
+
+            <div className="mt-4 flex flex-wrap gap-3 items-center text-sm text-slate-700">
+              <span className="px-3 py-1 rounded-full bg-slate-100">{contact.location}</span>
+              <a
+                className="px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200"
+                href={`mailto:${contact.email}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {contact.email}
+              </a>
+              <a
+                className="px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200"
+                href={contact.linkedin}
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </motion.header>
+
+        <main className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <section className="md:col-span-2 space-y-6">
+            {/* Experience */}
+            <div className="bg-white rounded-2xl shadow p-6">
+              <h2 className="text-lg font-semibold">Experience</h2>
+              <div className="mt-4 space-y-6">
+                {experience.map((exp) => (
+                  <article key={exp.company} className="flex flex-col md:flex-row md:items-start gap-4">
+                    <div className="w-full md:w-40 text-sm text-slate-500">
+                      <div className="font-medium text-slate-800">{exp.company}</div>
+                      <div className="mt-1">{exp.title}</div>
+                      <div className="mt-1 text-xs">{exp.period}</div>
+                    </div>
+                    <div className="flex-1 text-sm text-slate-700">
+                      <ul className="list-disc pl-5 space-y-1">
+                        {exp.bullets.map((b, i) => (
+                          <li key={i}>{b}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            {/* Achievements */}
+            <div className="bg-white rounded-2xl shadow p-6">
+              <h2 className="text-lg font-semibold">Select Achievements</h2>
+              <ul className="mt-3 list-disc pl-5 text-sm text-slate-700 space-y-1">
+                {achievements.map((a, i) => (
+                  <li key={i}>{a}</li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Certifications & Education */}
+            <div className="bg-white rounded-2xl shadow p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-md font-semibold">Education</h3>
+                <div className="mt-2 text-sm text-slate-700">
+                  <div className="font-medium">{education.degree}</div>
+                  <div className="text-xs">{education.college}</div>
+                  <div className="mt-1 text-xs text-slate-500">{education.year}</div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-md font-semibold">Certifications</h3>
+                <div className="mt-2 text-sm text-slate-700 space-y-2">
+                  {certifications.map((c, i) => (
+                    <div key={i} className="p-3 bg-slate-50 rounded">
+                      <div className="font-medium">{c.title}</div>
+                      <div className="text-xs">{c.issuer} • {c.note}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <aside className="space-y-6">
+            {/* Skills */}
+            <div className="bg-white rounded-2xl shadow p-6">
+              <h2 className="text-lg font-semibold">Technical Skills</h2>
+              <div className="mt-3 text-sm text-slate-700 space-y-3">
+                <div>
+                  <div className="text-xs font-medium text-slate-600">Programming</div>
+                  <div className="mt-1 flex flex-wrap gap-2">
+                    {skills.programming.map((s) => (
+                      <span key={s} className="text-xs px-2 py-1 bg-slate-100 rounded">{s}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-xs font-medium text-slate-600">Tools & Debugging</div>
+                  <div className="mt-1 flex flex-wrap gap-2">
+                    {skills.tools.map((s) => (
+                      <span key={s} className="text-xs px-2 py-1 bg-slate-100 rounded">{s}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-xs font-medium text-slate-600">Databases</div>
+                  <div className="mt-1 flex flex-wrap gap-2">
+                    {skills.db.map((s) => (
+                      <span key={s} className="text-xs px-2 py-1 bg-slate-100 rounded">{s}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-xs font-medium text-slate-600">Ticketing & Networking</div>
+                  <div className="mt-1 flex flex-wrap gap-2">
+                    {skills.ticketing.map((s) => (
+                      <span key={s} className="text-xs px-2 py-1 bg-slate-100 rounded">{s}</span>
+                    ))}
+                    {skills.networking.map((s) => (
+                      <span key={s} className="text-xs px-2 py-1 bg-slate-100 rounded">{s}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Contact Card */}
+            <div className="bg-white rounded-2xl shadow p-6 text-sm">
+              <h3 className="font-semibold">Contact</h3>
+              <div className="mt-3 space-y-2">
+                <div>{contact.location}</div>
+                <a href={`mailto:${contact.email}`} className="block underline truncate">{contact.email}</a>
+                <a href={contact.linkedin} target="_blank" rel="noreferrer" className="block underline">LinkedIn Profile</a>
+              </div>
+
+              <div className="mt-4">
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="inline-block w-full text-center px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-medium shadow"
+                >
+                  Email Me
+                </a>
+              </div>
+            </div>
+
+            {/* Download Resume Button (client-side) */}
+            <div className="bg-white rounded-2xl shadow p-6 text-center">
+              <h4 className="font-semibold">Resume</h4>
+              <p className="text-xs mt-2 text-slate-600">PDF / DOCX available — add your download link.</p>
+              <div className="mt-4">
+                <button className="px-4 py-2 rounded-lg border border-slate-200 text-sm w-full">Download Resume</button>
+              </div>
+            </div>
+          </aside>
+        </main>
+
+        <footer className="mt-8 text-center text-xs text-slate-500">
+          Built with ❤️ • {new Date().getFullYear()} • Shahbaz Khan
+        </footer>
+      </div>
+    </div>
+  );
+}
