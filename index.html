@@ -1,202 +1,696 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Shahbaz Khan — Portfolio</title>
-  <meta name="description" content="Shahbaz Khan — Senior Product Support Engineer portfolio and resume." />
-  <style>
-    :root{
-      --bg:#f8fafc; --card:#ffffff; --muted:#6b7280; --accent1:#6366f1; --accent2:#a78bfa; --radius:16px; --max:1100px;
-      --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{font-family:var(--sans);background:var(--bg);color:#0f172a;margin:0;padding:32px;display:flex;align-items:flex-start;justify-content:center}
-    .container{max-width:var(--max);width:100%;}
-    .hero{display:flex;gap:24px;background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:0 8px 24px rgba(15,23,42,0.06);align-items:center}
-    .avatar{width:92px;height:92px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:28px;background:linear-gradient(135deg,var(--accent1),var(--accent2))}
-    .name{font-size:22px;font-weight:700;margin:0}
-    .summary{color:var(--muted);margin-top:8px;line-height:1.45}
-    .chips{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
-    .chip{background:#f1f5f9;color:#0f172a;padding:6px 10px;border-radius:999px;font-size:13px}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Shahbaz Khan | Portfolio</title>
 
-    main{display:grid;grid-template-columns:2fr 1fr;gap:20px;margin-top:24px}
-    .card{background:var(--card);border-radius:14px;padding:20px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
-    h2{margin:0;font-size:16px}
-    .experience-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px dashed rgba(15,23,42,0.04)}
-    .exp-meta{width:170px;color:var(--muted);font-size:13px}
-    .exp-meta .company{font-weight:600;color:#0f172a}
-    ul{margin:8px 0 0 18px;padding:0}
-    li{margin-bottom:6px}
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-    .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .skill-badge{display:inline-block;padding:6px 8px;border-radius:8px;background:#f8fafc;border:1px solid #eef2ff;font-size:13px}
+    <style>
 
-    aside .contact a{display:block;color:var(--accent1);text-decoration:none;margin-top:6px}
-    .download{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;text-decoration:none}
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
+        }
 
-    footer{text-align:center;color:var(--muted);font-size:13px;margin-top:22px}
+        body{
+            background:#000;
+            color:#fff;
+            font-family:"Times New Roman", serif;
+            line-height:1.7;
+        }
 
-    @media (max-width:900px){main{grid-template-columns:1fr} .exp-meta{width:140px}}
-    @media (max-width:520px){body{padding:18px}.hero{flex-direction:column;align-items:flex-start}.avatar{width:72px;height:72px;font-size:20px}.exp-meta{width:110px}}
-  </style>
+        section{
+            padding:90px 8%;
+            border-bottom:1px solid #222;
+        }
+
+        h1,h2,h3{
+            letter-spacing:2px;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:60px;
+            font-size:40px;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav{
+            width:100%;
+            padding:25px 8%;
+            background:#000;
+            position:sticky;
+            top:0;
+            z-index:1000;
+            border-bottom:1px solid #222;
+        }
+
+        nav ul{
+            display:flex;
+            justify-content:center;
+            gap:40px;
+            list-style:none;
+            flex-wrap:wrap;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:white;
+            font-size:18px;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            color:#999;
+        }
+
+        /* ================= HERO SECTION ================= */
+
+        .hero{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:40px;
+        }
+
+        .hero-left{
+            flex:1;
+            display:flex;
+            flex-direction:column;
+            gap:30px;
+        }
+
+        .hero-left a{
+            color:white;
+            font-size:30px;
+            transition:0.3s;
+        }
+
+        .hero-left a:hover{
+            color:#999;
+            transform:scale(1.1);
+        }
+
+        .hero-center{
+            flex:2;
+            text-align:center;
+        }
+
+        .hero-center h1{
+            font-size:72px;
+            font-weight:bold;
+        }
+
+        .hero-center p{
+            margin-top:15px;
+            font-size:22px;
+            letter-spacing:3px;
+        }
+
+        .hero-right{
+            flex:1;
+            display:flex;
+            justify-content:center;
+        }
+
+        .profile-img{
+            width:300px;
+            height:300px;
+            border-radius:50%;
+            border:4px solid white;
+            overflow:hidden;
+        }
+
+        .profile-img img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        /* ================= GRID ================= */
+
+        .grid-3{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:30px;
+        }
+
+        .grid-4{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:25px;
+        }
+
+        .card{
+            border:1px solid #333;
+            padding:30px;
+            min-height:300px;
+            transition:0.4s;
+            background:#050505;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+            border-color:#888;
+        }
+
+        .card h3{
+            margin-bottom:20px;
+            font-size:24px;
+        }
+
+        .card p,
+        .card li{
+            font-size:17px;
+        }
+
+        .card ul{
+            padding-left:20px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer{
+            text-align:center;
+            padding:30px;
+            font-size:18px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width:1000px){
+
+            .hero{
+                flex-direction:column-reverse;
+                text-align:center;
+            }
+
+            .hero-left{
+                flex-direction:row;
+                justify-content:center;
+            }
+
+            .grid-3{
+                grid-template-columns:1fr;
+            }
+
+            .grid-4{
+                grid-template-columns:1fr 1fr;
+            }
+
+            .hero-center h1{
+                font-size:50px;
+            }
+        }
+
+        @media(max-width:600px){
+
+            .grid-4{
+                grid-template-columns:1fr;
+            }
+
+            .hero-center h1{
+                font-size:38px;
+            }
+
+            .profile-img{
+                width:220px;
+                height:220px;
+            }
+
+            nav ul{
+                gap:20px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-  <div class="container">
-    <header class="hero">
-      <div class="avatar">SK</div>
-      <div>
-        <h1 class="name">Shahbaz Khan</h1>
-        <p class="summary">Dynamic Product Support Engineer with 7+ years of experience across CPaaS and SaaS platforms. Specialized in advanced troubleshooting, data analysis, enterprise account audits, and end-to-end project handling. Proven ability to collaborate with cross-functional teams, drive product improvements, and deliver high-impact customer solutions. Strong track record in managing escalations, optimizing processes, and enhancing user experience.</p>
-        <div class="chips">
-          <div class="chip">Dehradun, Uttarakhand, IN</div>
-          <a class="chip" href="mailto:khanshahbaz2795@gmail.com">khanshahbaz2795@gmail.com</a>
-          <a class="chip" href="https://linkedin.com/in/shahbazkhan0101" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-      </div>
-    </header>
 
-    <main>
-      <section>
-        <div class="card">
-          <h2>Experience</h2>
-          <div style="margin-top:12px">
-            <div class="experience-item">
-              <div class="exp-meta">
-                <div class="company">Singular</div>
-                <div>Senior Product Support Engineer</div>
-                <div style="margin-top:6px;font-size:12px;color:var(--muted)">July 2024 — Present</div>
-              </div>
-              <div>
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#qualification">Qualification</a></li>
+            <li><a href="#skills">Skills & Knowledge</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero" id="contacts">
+
+        <!-- LEFT -->
+        <div class="hero-left">
+
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="tel:+919999999999">
+                <i class="fas fa-phone"></i>
+            </a>
+
+            <a href="mailto:khanshahbaz2795@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+            <a href="https://github.com/yourgithub" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+
+        </div>
+
+        <!-- CENTER -->
+        <div class="hero-center">
+            <h1>SHAHBAZ KHAN</h1>
+
+            <p>
+                SENIOR PRODUCT SUPPORT ENGINEER
+            </p>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="hero-right">
+
+            <div class="profile-img">
+                <img src="your-image.jpg" alt="Shahbaz Khan">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section id="experience">
+
+        <h2>EXPERIENCE</h2>
+
+        <div class="grid-3">
+
+            <!-- LEFT -->
+            <div class="card">
+
+                <h3>TECOMELLA</h3>
+
+                <p>
+                    Senior Product Support Specialist
+                </p>
+
+                <br>
+
+                <p>
+                    Nov 2018 – Jul 2021
+                </p>
+
+                <br>
+
+                <p>
+                    Managed multi-channel customer support and handled
+                    escalations while improving response efficiency and
+                    identifying service-impacting issues.
+                </p>
+
+            </div>
+
+            <!-- CENTER -->
+            <div class="card">
+
+                <h3>WEBENGAGE & PLIVO</h3>
+
+                <p>
+                    Senior Product Support Engineer / Product Support Engineer
+                </p>
+
+                <br>
+
+                <p>
+                    Aug 2021 – Jul 2024
+                </p>
+
+                <br>
+
+                <p>
+                    Provided advanced support for messaging, voice, and video
+                    platforms. Managed L3 escalations, analyzed APIs,
+                    logs, network traces, and performed code-level
+                    investigations.
+                </p>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="card">
+
+                <h3>SINGULAR</h3>
+
+                <p>
+                    Product Support Engineer
+                </p>
+
+                <br>
+
+                <p>
+                    Jul 2024 – Present
+                </p>
+
+                <br>
+
+                <p>
+                    Delivering advanced technical support for integrations,
+                    configurations, and enterprise account audits.
+                    Collaborating with R&D teams, managing high-impact
+                    projects, and performing deep historical data analysis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+        <h2>SKILLS & KNOWLEDGE</h2>
+
+        <div class="grid-3">
+
+            <!-- LEFT -->
+            <div class="card">
+
+                <h3>Soft Skills</h3>
+
                 <ul>
-                  <li>Assist customers and internal teams with product functionality, troubleshooting, and configuration issues.</li>
-                  <li>Communicate effectively with clients to gather feedback and address concerns promptly.</li>
-                  <li>Investigate and resolve technical problems, coordinating with engineering as needed.</li>
-                  <li>Lead enterprise account audits before renewal and perform deep historical data analysis.</li>
-                  <li>Handle multiple high-impact projects and collaborate with R&D to enhance product capabilities.</li>
+                    <li>Problem Solving</li>
+                    <li>Critical Thinking</li>
+                    <li>Client Management</li>
+                    <li>Cross-team Collaboration</li>
+                    <li>Project Handling</li>
+                    <li>Communication Skills</li>
+                    <li>Escalation Management</li>
                 </ul>
-              </div>
+
             </div>
 
-            <div class="experience-item">
-              <div class="exp-meta">
-                <div class="company">Plivo</div>
-                <div>Product Support Engineer</div>
-                <div style="margin-top:6px;font-size:12px;color:var(--muted)">Aug 2022 — July 2024</div>
-              </div>
-              <div>
+            <!-- CENTER -->
+            <div class="card">
+
+                <h3>Languages & Databases</h3>
+
                 <ul>
-                  <li>Conducted in-depth analysis and debugging of software issues and code reviews.</li>
-                  <li>Primary point of contact for Level 3 support and escalations.</li>
-                  <li>Authored knowledge base articles and mentored junior engineers.</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>Oracle</li>
                 </ul>
-              </div>
+
             </div>
 
-            <div class="experience-item">
-              <div class="exp-meta">
-                <div class="company">WebEngage</div>
-                <div>Senior Product Support Engineer</div>
-                <div style="margin-top:6px;font-size:12px;color:var(--muted)">Aug 2021 — Aug 2022</div>
-              </div>
-              <div>
+            <!-- RIGHT -->
+            <div class="card">
+
+                <h3>Tools & Technologies</h3>
+
                 <ul>
-                  <li>Provided advanced technical support for messaging, voice and video products.</li>
-                  <li>Investigated customer issues using logs and network traces.</li>
+                    <li>ElasticSearch</li>
+                    <li>Datadog</li>
+                    <li>Wireshark</li>
+                    <li>Postman</li>
+                    <li>Jira</li>
+                    <li>Zendesk</li>
+                    <li>Intercom</li>
+                    <li>TCP/IP & RTP/SIP</li>
                 </ul>
-              </div>
+
             </div>
 
-            <div class="experience-item" style="border-bottom:none">
-              <div class="exp-meta">
-                <div class="company">Tecomella</div>
-                <div>Senior Product Support Specialist</div>
-                <div style="margin-top:6px;font-size:12px;color:var(--muted)">Nov 2018 — Jul 2021</div>
-              </div>
-              <div>
+        </div>
+
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <h2>PROJECTS</h2>
+
+        <div class="grid-3">
+
+            <!-- LEFT -->
+            <div class="card">
+
+                <h3>Enterprise Account Audits</h3>
+
+                <p>
+                    Conducted enterprise-level account audits before renewal,
+                    analyzed historical performance data, and optimized
+                    customer account health.
+                </p>
+
+            </div>
+
+            <!-- CENTER -->
+            <div class="card">
+
+                <h3>L3 Escalation Management</h3>
+
+                <p>
+                    Handled high-priority escalations, performed deep log
+                    analysis, API debugging, and collaborated with internal
+                    engineering teams for resolution.
+                </p>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="card">
+
+                <h3>Knowledge Base & Mentorship</h3>
+
+                <p>
+                    Created technical documentation, authored knowledge base
+                    content, and mentored junior engineers to improve support
+                    operations and troubleshooting efficiency.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= QUALIFICATIONS ================= -->
+
+    <section id="qualification">
+
+        <h2>QUALIFICATIONS</h2>
+
+        <div class="grid-4">
+
+            <!-- Graduation -->
+            <div class="card">
+
+                <h3>Graduation</h3>
+
+                <p>
+                    B.Tech in Computer Science Engineering
+                </p>
+
+                <br>
+
+                <p>
+                    Graphic Era University
+                </p>
+
+                <br>
+
+                <p>
+                    2013 – 2017
+                </p>
+
+            </div>
+
+            <!-- Certification -->
+            <div class="card">
+
+                <h3>Certification</h3>
+
+                <p>
+                    CCNA Certification
+                </p>
+
+                <br>
+
+                <p>
+                    CETPA Pvt Ltd
+                </p>
+
+            </div>
+
+            <!-- 12th -->
+            <div class="card">
+
+                <h3>12th</h3>
+
+                <p>
+                    Senior Secondary Education
+                </p>
+
+                <br>
+
+                <p>
+                    Details can be updated here
+                </p>
+
+            </div>
+
+            <!-- 10th -->
+            <div class="card">
+
+                <h3>10th</h3>
+
+                <p>
+                    Secondary Education
+                </p>
+
+                <br>
+
+                <p>
+                    Details can be updated here
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <h2>ABOUT</h2>
+
+        <div class="grid-4">
+
+            <!-- Hobbies -->
+            <div class="card">
+
+                <h3>Hobbies</h3>
+
                 <ul>
-                  <li>Managed customer queries through ticketing tools, chat, email and calls.</li>
-                  <li>Resolved escalations and identified service-impacting issues proactively.</li>
+                    <li>Technology Research</li>
+                    <li>Problem Solving</li>
+                    <li>Learning Networking</li>
+                    <li>Exploring SaaS Platforms</li>
                 </ul>
-              </div>
+
             </div>
-          </div>
+
+            <!-- Personal Info -->
+            <div class="card">
+
+                <h3>Personal Info</h3>
+
+                <p>Name: Shahbaz Khan</p>
+                <p>Experience: 7+ Years</p>
+                <p>Role: Product Support Engineer</p>
+
+            </div>
+
+            <!-- Location -->
+            <div class="card">
+
+                <h3>Location</h3>
+
+                <p>
+                    Dehradun, Uttarakhand, India
+                </p>
+
+            </div>
+
+            <!-- Contact -->
+            <div class="card">
+
+                <h3>Contact Details</h3>
+
+                <p>
+                    Email:
+                    khanshahbaz2795@gmail.com
+                </p>
+
+                <br>
+
+                <p>
+                    LinkedIn:
+                    linkedin.com/in/yourprofile
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="card" style="margin-top:16px">
-          <h2>Select Achievements</h2>
-          <ul style="margin-top:10px;color:var(--muted)">
-            <li>Consistently achieved high customer satisfaction ratings.</li>
-            <li>Implemented a ticket categorization system, reducing response times by ~20%.</li>
-            <li>Led incident response for a critical outage, preventing revenue impact.</li>
-            <li>Recognized multiple times as a top performer.</li>
-          </ul>
-        </div>
+    </section>
 
-        <div class="card" style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:14px">
-          <div>
-            <h2>Education</h2>
-            <div style="margin-top:8px;color:var(--muted)">
-              <div style="font-weight:600">B.Tech (CSE)</div>
-              <div style="font-size:13px">Graphic Era University, Dehradun</div>
-              <div style="margin-top:6px;font-size:13px">2013 — 2017</div>
-            </div>
-          </div>
+    <!-- ================= FOOTER ================= -->
 
-          <div>
-            <h2>Certifications</h2>
-            <div style="margin-top:8px;color:var(--muted)">
-              <div style="font-weight:600">CCNA</div>
-              <div style="font-size:13px">CETPA Pvt Ltd • 45 Days</div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <footer>
 
-      <aside>
-        <div class="card contact">
-          <h2>Technical Skills</h2>
-          <div style="margin-top:10px;color:var(--muted)">
-            <div style="margin-bottom:8px;font-weight:600;font-size:13px">Programming</div>
-            <div class="skills-grid">
-              <div>
-                <span class="skill-badge">Java</span> <span class="skill-badge">Python</span> <span class="skill-badge">C++</span>
-                <div style="margin-top:6px">
-                  <span class="skill-badge">JavaScript</span> <span class="skill-badge">PHP</span>
-                </div>
-              </div>
+        © 2026 SHAHBAZ KHAN | PORTFOLIO WEBSITE
 
-              <div>
-                <div style="font-weight:600;font-size:13px;margin-bottom:8px">Tools / Others</div>
-                <span class="skill-badge">ElasticSearch</span> <span class="skill-badge">Datadog</span>
-                <div style="margin-top:6px"><span class="skill-badge">Wireshark</span> <span class="skill-badge">Postman</span></div>
-              </div>
-            </div>
+    </footer>
 
-            <div style="margin-top:12px">
-              <div style="font-weight:600;font-size:13px;margin-bottom:6px">Databases</div>
-              <div><span class="skill-badge">MySQL</span> <span class="skill-badge">Postgres</span> <span class="skill-badge">Oracle</span></div>
-            </div>
+    <!-- ================= JAVASCRIPT ================= -->
 
-            <div style="margin-top:12px">
-              <div style="font-weight:600;font-size:13px;margin-bottom:6px">Ticketing & Networking</div>
-              <div><span class="skill-badge">Jira</span> <span class="skill-badge">Zendesk</span> <span class="skill-badge">Intercom</span></div>
-              <div style="margin-top:6px"><span class="skill-badge">TCP/IP</span> <span class="skill-badge">RTP / SIP</span> <span class="skill-badge">CCNA</span></div>
-            </div>
-          </div>
-        </div>
+    <script>
 
-        <div class="card" style="margin-top:16px">
-          <h2>Contact</h2>
-          <div style="margin-top:8px;color:var(--muted)">
-            <div>Dehradun, Uttarakhand, IN</div>
-            <a href="mailto:khanshahbaz2795@gmail.com">khanshahbaz2795@gmail.com</a>
-            <a href="https://linkedin.com/in/shahbazkhan0101" target="_blank" rel="noreferrer">LinkedIn Profile</a>
-          </div>
-        </div>
-      </aside>
-    </main>
-  </div>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+
+            card.style.opacity = "0";
+            card.style.transform = "translateY(40px)";
+            card.style.transition = "0.7s";
+
+        });
+
+        window.addEventListener('scroll', () => {
+
+            cards.forEach(card => {
+
+                const top = card.getBoundingClientRect().top;
+
+                if(top < window.innerHeight - 100){
+
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0)";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
 </body>
 </html>
