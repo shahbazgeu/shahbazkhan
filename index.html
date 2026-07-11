@@ -1,991 +1,1542 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Shahbaz Khan | Senior Product Support Engineer</title>
+    <!-- ==========================================
+    BASIC META
+    =========================================== -->
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
 
-<style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-/*=========================
-GLOBAL
-=========================*/
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
+    <!-- ==========================================
+    SEO
+    =========================================== -->
 
-:root{
+    <title>Shahbaz Khan | Senior Product Support Engineer</title>
 
-    --primary:#38BDF8;
-    --secondary:#60A5FA;
-    --text:#F8FAFC;
-    --text-light:#CBD5E1;
+    <meta name="description"
+        content="Portfolio of Shahbaz Khan - Senior Product Support Engineer specializing in SaaS platforms, Enterprise Support, Mobile Attribution, SDK Debugging, APIs, SQL Investigations and Technical Solutions.">
 
-    --card:rgba(255,255,255,.05);
+    <meta name="keywords"
+        content="Shahbaz Khan, Product Support Engineer, Technical Support Engineer, SaaS, SQL, API, SDK, Mobile Attribution, Portfolio">
 
-    --border:rgba(255,255,255,.08);
+    <meta name="author"
+        content="Shahbaz Khan">
 
-    --shadow:0 15px 40px rgba(0,0,0,.35);
+    <!-- ==========================================
+    OPEN GRAPH
+    =========================================== -->
 
-}
+    <meta property="og:title"
+        content="Shahbaz Khan | Portfolio">
 
-body{
+    <meta property="og:description"
+        content="Senior Product Support Engineer with 7+ years of experience solving complex enterprise SaaS challenges.">
 
-    font-family:"Times New Roman", Georgia, serif;
+    <meta property="og:type"
+        content="website">
 
-    color:var(--text);
+    <meta property="og:image"
+        content="assets/images/profile.jpg">
 
-    line-height:1.8;
+    <!-- ==========================================
+    FAVICON
+    =========================================== -->
 
-    background:
-    linear-gradient(140deg,#0F172A,#1E293B,#111827);
+    <link rel="icon" href="assets/icons/favicon.png">
 
-    background-attachment:fixed;
+    <!-- ==========================================
+    GOOGLE FONTS
+    =========================================== -->
 
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-/*=========================
-SECTIONS
-=========================*/
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-section{
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
-    padding:110px 9%;
+    <!-- ==========================================
+    FONT AWESOME
+    =========================================== -->
 
-    position:relative;
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-}
+    <!-- ==========================================
+    CSS
+    =========================================== -->
 
-section:nth-child(even){
+    <link rel="stylesheet" href="css/style.css">
 
-    background:rgba(255,255,255,.02);
+    <link rel="stylesheet" href="css/animations.css">
 
-}
+    <link rel="stylesheet" href="css/responsive.css">
 
-h1,h2,h3{
-
-    font-weight:700;
-
-    letter-spacing:2px;
-
-}
-
-h2{
-
-    font-size:52px;
-
-    text-align:center;
-
-    margin-bottom:70px;
-
-    position:relative;
-
-}
-
-h2::after{
-
-    content:"";
-
-    width:80px;
-
-    height:4px;
-
-    background:var(--primary);
-
-    display:block;
-
-    margin:18px auto;
-
-    border-radius:20px;
-
-}
-
-/*=========================
-NAVBAR
-=========================*/
-
-nav{
-
-    position:fixed;
-
-    width:100%;
-
-    top:0;
-
-    left:0;
-
-    z-index:999;
-
-    background:rgba(15,23,42,.80);
-
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid var(--border);
-
-}
-
-nav ul{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:40px;
-
-    padding:25px;
-
-    list-style:none;
-
-}
-
-nav a{
-
-    color:white;
-
-    text-decoration:none;
-
-    font-size:20px;
-
-    font-weight:bold;
-
-    transition:.35s;
-
-}
-
-nav a:hover{
-
-    color:var(--primary);
-
-}
-
-/*=========================
-HERO
-=========================*/
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:60px;
-
-    background:
-
-    radial-gradient(circle at top right,
-    rgba(56,189,248,.18),
-    transparent 30%),
-
-    radial-gradient(circle at bottom left,
-    rgba(99,102,241,.18),
-    transparent 30%);
-
-}
-
-.hero-left{
-
-    flex:1;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:28px;
-
-}
-
-.hero-left a{
-
-    font-size:40px;
-
-    color:white;
-
-    transition:.35s;
-
-}
-
-.hero-left a:hover{
-
-    color:var(--primary);
-
-    transform:translateX(8px);
-
-}
-
-.hero-center{
-
-    flex:2;
-
-    text-align:center;
-
-}
-
-.hero-center h1{
-
-    font-size:90px;
-
-    letter-spacing:7px;
-
-    text-shadow:0 0 30px rgba(56,189,248,.15);
-
-}
-
-.hero-center p{
-
-    margin-top:20px;
-
-    font-size:28px;
-
-    color:var(--text-light);
-
-    letter-spacing:4px;
-
-}
-
-.hero-right{
-
-    flex:1;
-
-    display:flex;
-
-    justify-content:center;
-
-}
-
-.profile-img{
-
-    width:320px;
-
-    height:320px;
-
-    border-radius:50%;
-
-    overflow:hidden;
-
-    border:4px solid var(--primary);
-
-    box-shadow:
-
-    0 0 40px rgba(56,189,248,.25);
-
-}
-
-.profile-img img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-}
-
-/*=========================
-GRIDS
-=========================*/
-
-.grid-3{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:35px;
-
-}
-
-.grid-4{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:30px;
-
-}
-
-/*=========================
-CARDS
-=========================*/
-
-.card{
-
-    background:var(--card);
-
-    backdrop-filter:blur(16px);
-
-    border:1px solid var(--border);
-
-    border-radius:20px;
-
-    padding:35px;
-
-    min-height:320px;
-
-    box-shadow:var(--shadow);
-
-    transition:.4s;
-
-}
-
-.card:hover{
-
-    transform:translateY(-12px);
-
-    border-color:var(--primary);
-
-    box-shadow:
-
-    0 20px 45px rgba(56,189,248,.15);
-
-}
-
-.card h3{
-
-    font-size:30px;
-
-    margin-bottom:20px;
-
-    color:var(--primary);
-
-}
-
-.card p,
-.card li{
-
-    font-size:20px;
-
-    color:var(--text-light);
-
-    line-height:1.9;
-
-}
-
-.card ul{
-
-    padding-left:20px;
-
-}
-
-/*=========================
-FOOTER
-=========================*/
-
-footer{
-
-    padding:40px;
-
-    text-align:center;
-
-    background:#0B1120;
-
-    color:#94A3B8;
-
-    font-size:18px;
-
-}
-
-/*=========================
-SCROLLBAR
-=========================*/
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#111827;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:var(--primary);
-
-    border-radius:20px;
-
-}
-
-/*=========================
-RESPONSIVE
-=========================*/
-
-@media(max-width:1100px){
-
-.hero{
-
-flex-direction:column-reverse;
-
-text-align:center;
-
-padding-top:140px;
-
-}
-
-.hero-left{
-
-flex-direction:row;
-
-justify-content:center;
-
-}
-
-.grid-3{
-
-grid-template-columns:1fr;
-
-}
-
-.grid-4{
-
-grid-template-columns:1fr 1fr;
-
-}
-
-.hero-center h1{
-
-font-size:62px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.grid-4{
-
-grid-template-columns:1fr;
-
-}
-
-.hero-center h1{
-
-font-size:48px;
-
-}
-
-.hero-center p{
-
-font-size:22px;
-
-}
-
-.profile-img{
-
-width:250px;
-
-height:250px;
-
-}
-
-nav ul{
-
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-}
-
-</style>
 </head>
+
 <body>
-    <!-- ================= NAVBAR ================= -->
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#qualification">Qualification</a></li>
-            <li><a href="#skills">Skills & Knowledge</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contacts">Contacts</a></li>
+
+<!-- ==========================================
+NAVIGATION
+========================================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="#hero"
+            class="logo">
+
+            SK<span>.</span>
+
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#hero">Home</a>
+            </li>
+
+            <li>
+                <a href="#highlights">Highlights</a>
+            </li>
+
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills & Knowledge</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
         </ul>
+
+        <a href="assets/resume/Shahbaz_Khan_Resume.pdf"
+            target="_blank"
+            class="resume-btn">
+
+            <i class="fa-solid fa-download"></i>
+
+            Resume
+
+        </a>
+
     </nav>
-    <!-- ================= HERO SECTION ================= -->
-    <section class="hero" id="contacts">
-        <!-- LEFT -->
-        <div class="hero-left">
-            <a href="https://linkedin.com/in/shahbaz0101" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="tel:+917417240263">
-                <i class="fas fa-phone"></i>
-            </a>
-            <a href="mailto:khanshahbaz2795@gmail.com">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://github.com/shahbazgeu" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-        <!-- CENTER -->
-        <div class="hero-center">
-            <h1>SHAHBAZ KHAN</h1>
-            <p>
-                SENIOR PRODUCT SUPPORT ENGINEER
+
+</header>
+
+
+<!-- ==========================================
+HERO SECTION
+========================================== -->
+
+<section id="hero" class="hero">
+
+    <div class="container hero-content">
+
+        <!-- ===========================
+        LEFT CONTENT
+        ============================ -->
+
+        <div class="hero-text">
+
+            <p class="subtitle">
+                WELCOME TO MY PORTFOLIO
             </p>
-            <br>
-                    Senior Product Support Engineer with 7+ years of experience delivering technical solutions across SaaS and CPaaS platforms. 
-                    Specialized in enterprise customer support, mobile attribution, SDK and API troubleshooting, SQL-based investigations, 
-                    ETL validation, and cross-functional collaboration with Engineering and Product teams. Trusted to manage business-critical escalations, 
-                    support 20+ enterprise customers, handle approximately 150 technical investigations monthly, and lead enterprise account audits before 
-                    customer renewals. Proven track record of improving support processes, identifying root causes, influencing product enhancements, and 
-                    delivering outstanding customer outcomes.
-            </br>
-        </div>
-        <!-- RIGHT -->
-        <div class="hero-right">
 
-            <div class="profile-img">
-                <img src="https://lh3.googleusercontent.com/pw/AP1GczNKR96am0fweOb1FSaCku4d74q6FazBYQt8qmpXoTVdsR86Br2i68WLXm2gCXc_SzzEInoCb3fwuGi0fIKRw1mM9SekM0CCPQo7cYPKL1ldFTbvDXyf=w2400" alt="Shahbaz Khan">
-            </div>
+            <h1>
+                Shahbaz <span>Khan</span>
+            </h1>
 
-        </div>
+            <h2>
+                Senior Product Support Engineer
+            </h2>
 
-    </section>
+            <p class="hero-description">
 
-    <!-- ================= EXPERIENCE ================= -->
+                Helping Enterprise SaaS companies solve complex
+                technical challenges through deep investigation,
+                SQL analysis, SDK debugging, API integrations,
+                ETL validation and cross-functional collaboration.
 
-    <section id="experience">
+            </p>
 
-        <h2>EXPERIENCE</h2>
+            <!-- CTA Buttons -->
 
-        <div class="grid-3">
+            <div class="hero-buttons">
 
-           <!-- LEFT -->
-            <div class="card">
+                <a href="assets/resume/Shahbaz_Khan_Resume.pdf"
+                   class="btn btn-primary"
+                   target="_blank">
 
-                <h3>SINGULAR</h3>
+                    <i class="fa-solid fa-file-arrow-down"></i>
 
-                <p>
-                    Senior Product Support Engineer
-                </p>
+                    Download Resume
 
-                <br>
+                </a>
 
-                <p>
-                    Jul 2024 – Present
-                </p>
+                <a href="#projects"
+                   class="btn btn-secondary">
 
-                <br>
-                <ul>
-                <li> Resolve highly complex customer issues involving mobile attribution, SDK implementations, APIs, ETL pipelines, reporting, and partner integrations.</li>
-                <li> Support 20+ enterprise customers, managing approximately 150 technical investigations and escalations each month while maintaining high service quality.</li>
-                <li> Lead enterprise account audits before renewals by evaluating historical attribution data, integration health, reporting accuracy, and platform configurations to identify risks and optimization opportunities.</li>
-                <li> Analyze and customize SQL queries generated through internal tools to investigate customer issues, validate data accuracy, and support complex troubleshooting.</li>
-                <li> Perform deep investigations using API analysis, logs, attribution data, ETL validation, and mobile ecosystem diagnostics across Meta, Google Ads, TikTok, Apple Search Ads, and other partner integrations.</li>
-                <li> Collaborate with Engineering and Product teams to reproduce defects, validate fixes, and improve platform reliability.</li>
-                <li> Contribute to improving R&D escalation processes by streamlining communication and technical investigations between Support and Engineering.</li>
-                <li> Prepare detailed technical reports and customer-facing documentation explaining findings and recommended solutions. </li>
-                
-                </ul>
-                </br>
-            </div>
+                    <i class="fa-solid fa-diagram-project"></i>
 
-            <!-- CENTER 1 -->
-            <div class="card">
+                    View Projects
 
-                <h3>PLIVO</h3>
-
-                <p>
-                    Product Support Engineer
-                </p>
-
-                <br>
-
-                <p>
-                    Aug 2022 – Jul 2024
-                </p>
-
-                <br>
-
-                <ul>
-                  <li>Prepare detailed technical reports and customer-facing documentation explaining findings and recommended solutions.</li>
-                  <li>Performed advanced debugging through logs, backend analysis, API validation, and network traffic investigation.</li>
-                  <li>Collaborated with Engineering to resolve platform defects and improve service stability.</li>
-                  <li>Authored internal technical documentation and mentored junior engineers.</li>
-                  <li>Recognized multiple times as Employee of the Month for consistently delivering outstanding customer support and technical excellence.</li>
-                </ul>
-            </div>
-
-            <!-- CENTER 2 -->
-            <div class="card">
-
-                <h3>WEBENGAGE</h3>
-
-                <p>
-                    Senior Product Support Engineer
-                </p>
-
-                <br>
-
-                <p>
-                    AUG 2021 – AUG 2022
-                </p>
-
-                <br>
-                <ul>
-                  <li>Provided advanced support for messaging, voice, and video platforms.</li>
-                  <li>Analyzed logs, APIs, and network traces to resolve complex issues.</li>
-                
-                </ul>
-                </br>
-
-            </div>
-            
-            <!-- RIGHT  -->
-            
-            <div class="card">
-
-                <h3>TECOMELLA PRIVATE LIMITED</h3>
-
-                <p>
-                     Senior Product Support Specialist
-                </p>
-
-                <br>
-
-                <p>
-                    NOV 2018 – JUL 2021
-                </p>
-
-                <br>
-                <ul>
-                  <li>Managed multi-channel customer support and handled escalations.</li>
-                  <li>Improved response efficiency and identified service-impacting issues.</li>
-                
-                </ul>
-                </br>
-
-            </div>
-        </div>
-
-    </section>
-
-    <!-- ================= SKILLS ================= -->
-
-    <section id="skills">
-
-        <h2>SKILLS & KNOWLEDGE</h2>
-
-        <div class="grid-3">
-
-            <!-- LEFT -->
-            <div class="card">
-
-                <h3>Soft Skills</h3>
-
-                <ul>
-                    <li>Problem Solving</li>
-                    <li>Critical Thinking</li>
-                    <li>Client Management</li>
-                    <li>Cross-team Collaboration</li>
-                    <li>Project Handling</li>
-                    <li>Communication Skills</li>
-                    <li>Escalation Management</li>
-                </ul>
+                </a>
 
             </div>
 
-            <!-- CENTER -->
-            <div class="card">
+            <!-- Social Icons -->
 
-                <h3>Languages & Databases</h3>
+            <div class="hero-social">
 
-                <ul>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>C++</li>
-                    <li>JavaScript</li>
-                    <li>PHP</li>
-                    <li>MySQL</li>
-                    <li>PostgreSQL</li>
-                    <li>Oracle</li>
-                </ul>
+                <a href="https://linkedin.com/in/shahbaz0101"
+                   target="_blank">
 
-            </div>
+                    <i class="fab fa-linkedin-in"></i>
 
-            <!-- RIGHT -->
-            <div class="card">
+                </a>
 
-                <h3>Tools & Technologies</h3>
+                <a href="https://github.com/shahbazgeu"
+                   target="_blank">
 
-                <ul>
-                    <li>ElasticSearch</li>
-                    <li>Datadog</li>
-                    <li>Wireshark</li>
-                    <li>Postman</li>
-                    <li>Jira</li>
-                    <li>Zendesk</li>
-                    <li>Intercom</li>
-                    <li>TCP/IP & RTP/SIP</li>
-                </ul>
+                    <i class="fab fa-github"></i>
+
+                </a>
+
+                <a href="mailto:khanshahbaz2795@gmail.com">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+                <a href="tel:+917417240263">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </a>
 
             </div>
 
         </div>
 
-    </section>
+        <!-- ===========================
+        RIGHT IMAGE
+        ============================ -->
 
-    <!-- ================= PROJECTS ================= -->
+        <div class="hero-image">
 
-    <section id="projects">
+            <img src="assets/images/profile.jpg"
+                 alt="Shahbaz Khan">
 
-        <h2>PROJECTS</h2>
+        </div>
 
-        <div class="grid-3">
+    </div>
 
-            <!-- LEFT -->
-            <div class="card">
+    <!-- Scroll Indicator -->
 
-                <h3>Enterprise Renewal Audit Program</h3>
+    <div class="scroll-down">
+
+        <span>Scroll</span>
+
+        <div class="scroll-wheel"></div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+CAREER HIGHLIGHTS
+========================================== -->
+
+<section id="highlights" class="highlights">
+
+    <div class="container">
+
+        <h2>Career Highlights</h2>
+
+        <p class="section-subtitle">
+            Delivering enterprise-grade technical solutions across SaaS platforms through
+            deep investigation, data analysis, customer success, and engineering collaboration.
+        </p>
+
+        <div class="highlights-grid">
+
+            <!-- Card 1 -->
+
+            <div class="highlight-card glass">
+
+                <div class="highlight-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+
+                <h3 class="counter" data-target="7">7</h3>
+
+                <span>+</span>
+
+                <h4>Years of Experience</h4>
 
                 <p>
-                    <li>Led technical audits for enterprise customers before contract renewals.</li>
-                    <li>Reviewed attribution accuracy, SDK implementations, integrations, historical performance, and reporting consistency.</li>
-                    <li>Identified configuration issues and provided recommendations that helped customers optimize platform usage.</li>
+                    Solving complex technical issues across SaaS, CPaaS and enterprise software platforms.
                 </p>
 
             </div>
 
-            <!-- CENTER -->
-            <div class="card">
+            <!-- Card 2 -->
 
-                <h3>Cross-functional Product Improvement</h3>
+            <div class="highlight-card glass">
+
+                <div class="highlight-icon">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+
+                <h3 class="counter" data-target="20">20</h3>
+
+                <span>+</span>
+
+                <h4>Enterprise Customers</h4>
 
                 <p>
-                    <li>Worked with R&D and Product teams to reproduce customer issues, validate fixes, and improve platform functionality.</li>
-                    <li>Contributed to process improvements for escalation handling and technical investigations.</li>
+                    Supporting high-value enterprise clients with mission-critical technical investigations.
                 </p>
 
             </div>
 
-            <!-- RIGHT -->
-            <div class="card">
+            <!-- Card 3 -->
 
-                <h3>Knowledge Base & Mentorship</h3>
+            <div class="highlight-card glass">
+
+                <div class="highlight-icon">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                </div>
+
+                <h3 class="counter" data-target="150">150</h3>
+
+                <span>+</span>
+
+                <h4>Monthly Investigations</h4>
 
                 <p>
-                    Created technical documentation, authored knowledge base
-                    content, and mentored junior engineers to improve support
-                    operations and troubleshooting efficiency.
+                    Managing complex SDK, API, SQL, ETL and attribution investigations every month.
+                </p>
+
+            </div>
+
+            <!-- Card 4 -->
+
+            <div class="highlight-card glass">
+
+                <div class="highlight-icon">
+                    <i class="fa-solid fa-code-branch"></i>
+                </div>
+
+                <h3 class="counter" data-target="4">4</h3>
+
+                <span></span>
+
+                <h4>Global SaaS Companies</h4>
+
+                <p>
+                    Building expertise across multiple global technology companies and enterprise ecosystems.
                 </p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
-    <!-- ================= QUALIFICATIONS ================= -->
+</section>
 
-    <section id="qualification">
+<!-- ==============================
+     EXPERIENCE SECTION
+================================ -->
 
-        <h2>QUALIFICATIONS</h2>
+<section id="experience" class="experience">
 
-        <div class="grid-4">
+    <div class="section-title">
+        <h2>Experience</h2>
+        <p>My professional journey and key contributions</p>
+    </div>
 
-            <!-- Graduation -->
-            <div class="card">
 
-                <h3>Graduation</h3>
+    <div class="timeline">
 
-                <p>
-                    B.Tech in Computer Science Engineering
+
+        <!-- Singular Experience -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-content">
+
+                <h3>Product Support Engineer</h3>
+
+                <p class="company">
+                    Singular
                 </p>
 
-                <br>
-
-                <p>
-                    Graphic Era University
+                <p class="duration">
+                    2022 - Present
                 </p>
 
-                <br>
-
-                <p>
-                    2013 – 2017
-                </p>
-
-            </div>
-
-            <!-- Certification -->
-            <div class="card">
-
-                <h3>Certification</h3>
-
-                <p>
-                    CCNA Certification
-                </p>
-
-                <br>
-
-                <p>
-                    CETPA Pvt Ltd
-                </p>
-
-            </div>
-
-            <!-- 12th -->
-            <div class="card">
-
-                <h3>12th</h3>
-
-                <p>
-                    Senior Secondary Education
-                </p>
-
-                <br>
-
-                <p>
-                    Details can be updated here
-                </p>
-
-            </div>
-
-            <!-- 10th -->
-            <div class="card">
-
-                <h3>10th</h3>
-
-                <p>
-                    Secondary Education
-                </p>
-
-                <br>
-
-                <p>
-                    Details can be updated here
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= ABOUT ================= -->
-
-    <section id="about">
-
-        <h2>ABOUT</h2>
-
-        <div class="grid-4">
-
-            <!-- Hobbies -->
-            <div class="card">
-
-                <h3>Hobbies</h3>
 
                 <ul>
-                    <li>Technology Research</li>
-                    <li>Problem Solving</li>
-                    <li>Learning Networking</li>
-                    <li>Exploring SaaS Platforms</li>
+
+                    <li>
+                        Provided technical support for SaaS-based attribution and analytics platform.
+                    </li>
+
+                    <li>
+                        Worked on debugging SDK integrations, API issues, ETL pipelines and data discrepancies.
+                    </li>
+
+                    <li>
+                        Performed enterprise account audits, historical data analysis and renewal support.
+                    </li>
+
+                    <li>
+                        Collaborated with R&D teams to improve product functionality and resolve complex issues.
+                    </li>
+
+                    <li>
+                        Analysed SQL queries and large datasets to investigate customer issues.
+                    </li>
+
                 </ul>
 
-            </div>
-
-            <!-- Personal Info -->
-            <div class="card">
-
-                <h3>Personal Info</h3>
-
-                <p>Name: Shahbaz Khan</p>
-                <p>Experience: 7+ Years</p>
-                <p>Role: Product Support Engineer</p>
-
-            </div>
-
-            <!-- Location -->
-            <div class="card">
-
-                <h3>Location</h3>
-
-                <p>
-                    Dehradun, Uttarakhand, India
-                </p>
-
-            </div>
-
-            <!-- Contact -->
-            <div class="card">
-
-                <h3>Contact Details</h3>
-
-                <p>
-                    Email:
-                    khanshahbaz2795@gmail.com
-                </p>
-
-                <br>
-
-                <p>
-                    LinkedIn:
-                    linkedin.com/in/yourprofile
-                </p>
 
             </div>
 
         </div>
 
-    </section>
 
-    <!-- ================= FOOTER ================= -->
 
-    <footer>
+        <!-- Previous Experience -->
 
-        © 2026 SHAHBAZ KHAN | PORTFOLIO WEBSITE
+        <div class="timeline-item">
 
-    </footer>
+            <div class="timeline-content">
 
-    <!-- ================= JAVASCRIPT ================= -->
+                <h3>Application Support Engineer</h3>
 
-    <script>
+                <p class="company">
+                    Previous Organization
+                </p>
 
-        const cards = document.querySelectorAll('.card');
+                <p class="duration">
+                    2019 - 2022
+                </p>
 
-        cards.forEach(card => {
 
-            card.style.opacity = "0";
-            card.style.transform = "translateY(40px)";
-            card.style.transition = "0.7s";
+                <ul>
 
-        });
+                    <li>
+                        Managed customer-facing technical issues across SaaS and CPaaS platforms.
+                    </li>
 
-        window.addEventListener('scroll', () => {
+                    <li>
+                        Troubleshot API, integration and application-level problems.
+                    </li>
 
-            cards.forEach(card => {
+                    <li>
+                        Worked with engineering teams for issue resolution and product improvements.
+                    </li>
 
-                const top = card.getBoundingClientRect().top;
+                </ul>
 
-                if(top < window.innerHeight - 100){
 
-                    card.style.opacity = "1";
-                    card.style.transform = "translateY(0)";
+            </div>
 
-                }
+        </div>
 
-            });
 
-        });
 
-    </script>
+        <!-- Starting Career -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-content">
+
+                <h3>Technical Support Engineer</h3>
+
+                <p class="company">
+                    Beginning of Career
+                </p>
+
+                <p class="duration">
+                    2017 - 2019
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Provided technical assistance and customer support.
+                    </li>
+
+                    <li>
+                        Developed troubleshooting skills across different software platforms.
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<!-- ==============================
+     QUALIFICATION SECTION
+================================ -->
+
+<section id="qualification" class="qualification">
+
+
+    <div class="section-title">
+
+        <h2>Qualification</h2>
+
+        <p>
+            Academic background and professional learning
+        </p>
+
+    </div>
+
+
+
+    <div class="qualification-container">
+
+
+        <!-- Graduation -->
+
+        <div class="qualification-card">
+
+            <div class="qualification-year">
+                2017
+            </div>
+
+
+            <h3>
+                Bachelor of Technology (B.Tech)
+            </h3>
+
+
+            <p class="institution">
+                Computer Science / Information Technology
+            </p>
+
+
+            <p>
+                Built a strong foundation in programming concepts,
+                software development, databases and computer networks.
+            </p>
+
+
+        </div>
+
+
+
+
+        <!-- Technical Learning -->
+
+        <div class="qualification-card">
+
+
+            <div class="qualification-year">
+                Professional Growth
+            </div>
+
+
+            <h3>
+                Technical Skills Development
+            </h3>
+
+
+            <p class="institution">
+                Self Learning & Industry Experience
+            </p>
+
+
+            <p>
+                Continuously improving expertise in APIs, SDK debugging,
+                data analysis, cloud platforms and modern AI technologies.
+            </p>
+
+
+        </div>
+
+
+
+
+        <!-- Current Learning -->
+
+        <div class="qualification-card">
+
+
+            <div class="qualification-year">
+                Current
+            </div>
+
+
+            <h3>
+                AI & Python Learning Journey
+            </h3>
+
+
+            <p class="institution">
+                Artificial Intelligence / Machine Learning
+            </p>
+
+
+            <p>
+                Exploring Python, automation, data processing,
+                machine learning concepts and AI-driven solutions.
+            </p>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</section>
+
+
+<!-- ==============================
+     SKILLS & KNOWLEDGE SECTION
+================================ -->
+
+<section id="skills" class="skills">
+
+
+    <div class="section-title">
+
+        <h2>Skills & Knowledge</h2>
+
+        <p>
+            Technologies, tools and expertise
+        </p>
+
+    </div>
+
+
+
+
+    <div class="skills-container">
+
+
+
+        <!-- Technical Skills -->
+
+        <div class="skills-card">
+
+
+            <h3>
+                Technical Skills
+            </h3>
+
+
+            <div class="skill-tags">
+
+
+                <span>Python</span>
+
+                <span>SQL</span>
+
+                <span>REST APIs</span>
+
+                <span>SDK Debugging</span>
+
+                <span>ETL</span>
+
+                <span>Data Analysis</span>
+
+                <span>JSON/XML</span>
+
+                <span>Automation</span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+        <!-- Platforms -->
+
+        <div class="skills-card">
+
+
+            <h3>
+                Platforms & Tools
+            </h3>
+
+
+            <div class="skill-tags">
+
+
+                <span>Singular</span>
+
+                <span>GitHub</span>
+
+                <span>Render</span>
+
+                <span>Postman</span>
+
+                <span>Google Play Console</span>
+
+                <span>Meta Ads</span>
+
+                <span>TikTok Ads</span>
+
+                <span>DuckDB</span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+        <!-- Domain Knowledge -->
+
+        <div class="skills-card">
+
+
+            <h3>
+                Domain Knowledge
+            </h3>
+
+
+            <div class="skill-tags">
+
+
+                <span>SaaS</span>
+
+                <span>CPaaS</span>
+
+                <span>Mobile Attribution</span>
+
+                <span>Analytics</span>
+
+                <span>Customer Support</span>
+
+                <span>Enterprise Support</span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+        <!-- Learning -->
+
+        <div class="skills-card">
+
+
+            <h3>
+                Currently Learning
+            </h3>
+
+
+            <div class="skill-tags">
+
+
+                <span>Artificial Intelligence</span>
+
+                <span>Machine Learning</span>
+
+                <span>FastAPI</span>
+
+                <span>Flask</span>
+
+                <span>Data Science</span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+</section>
+
+<!-- ==============================
+     PROJECTS SECTION
+================================ -->
+
+<section id="projects" class="projects">
+
+
+    <div class="section-title">
+
+        <h2>Projects</h2>
+
+        <p>
+            Personal and professional projects showcasing my technical journey
+        </p>
+
+    </div>
+
+
+
+    <div class="projects-container">
+
+
+        <!-- GraphBuilder Project -->
+
+        <div class="project-card">
+
+            <h3>
+                GraphBuilder
+            </h3>
+
+
+            <p class="project-tech">
+                Python • Flask • FastAPI • Plotly • DuckDB
+            </p>
+
+
+            <p>
+                A web-based data visualization platform that allows users
+                to create dynamic graphs from structured datasets.
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Built interactive charts using Plotly.
+                </li>
+
+                <li>
+                    Developed backend APIs using Flask/FastAPI.
+                </li>
+
+                <li>
+                    Integrated data processing workflows using Python.
+                </li>
+
+                <li>
+                    Added configuration management and JSON export capabilities.
+                </li>
+
+            </ul>
+
+
+            <div class="project-links">
+
+                <a href="#" target="_blank">
+                    GitHub
+                </a>
+
+                <a href="#" target="_blank">
+                    Live Demo
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-- Data Analysis Project -->
+
+        <div class="project-card">
+
+
+            <h3>
+                Data Analysis & Reporting Automation
+            </h3>
+
+
+            <p class="project-tech">
+                SQL • Python • ETL • Data Processing
+            </p>
+
+
+            <p>
+                Worked on data investigation, reporting analysis and
+                troubleshooting complex data-related issues.
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Analysed large datasets to identify discrepancies.
+                </li>
+
+                <li>
+                    Worked with ETL pipelines and data mappings.
+                </li>
+
+                <li>
+                    Automated repetitive analysis workflows.
+                </li>
+
+            </ul>
+
+
+        </div>
+
+
+
+
+
+        <!-- AI Learning Project -->
+
+        <div class="project-card">
+
+
+            <h3>
+                AI & Python Experiments
+            </h3>
+
+
+            <p class="project-tech">
+                Python • Machine Learning • Automation
+            </p>
+
+
+            <p>
+                Exploring AI-driven solutions through Python programming,
+                automation and machine learning concepts.
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Learning Python development workflows.
+                </li>
+
+                <li>
+                    Building small AI-powered utilities.
+                </li>
+
+            </ul>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</section>
+
+<!-- ==============================
+     EDUCATION SECTION
+================================ -->
+
+<section id="education" class="education">
+
+
+    <div class="section-title">
+
+        <h2>Education</h2>
+
+        <p>
+            My academic background and foundation
+        </p>
+
+    </div>
+
+
+
+    <div class="education-container">
+
+
+
+        <!-- Degree -->
+
+        <div class="education-card">
+
+
+            <div class="education-icon">
+                🎓
+            </div>
+
+
+            <div class="education-content">
+
+
+                <h3>
+                    Bachelor of Technology (B.Tech)
+                </h3>
+
+
+                <p class="institution">
+                    Computer Science / Information Technology
+                </p>
+
+
+                <p class="duration">
+                    2013 - 2017
+                </p>
+
+
+                <p>
+                    Studied core computer science concepts including
+                    programming, databases, networking and software
+                    engineering fundamentals.
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-- Higher Secondary -->
+
+        <div class="education-card">
+
+
+            <div class="education-icon">
+                📘
+            </div>
+
+
+            <div class="education-content">
+
+
+                <h3>
+                    Higher Secondary Education
+                </h3>
+
+
+                <p class="institution">
+                    Science Stream
+                </p>
+
+
+                <p class="duration">
+                    2011 - 2013
+                </p>
+
+
+                <p>
+                    Developed a strong foundation in mathematics,
+                    science and analytical thinking.
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-- Continuous Learning -->
+
+        <div class="education-card">
+
+
+            <div class="education-icon">
+                💡
+            </div>
+
+
+            <div class="education-content">
+
+
+                <h3>
+                    Continuous Learning
+                </h3>
+
+
+                <p class="institution">
+                    Technology & Professional Development
+                </p>
+
+
+                <p class="duration">
+                    Ongoing
+                </p>
+
+
+                <p>
+                    Learning modern technologies including Python,
+                    Artificial Intelligence, APIs, cloud platforms
+                    and data engineering concepts.
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</section>
+
+<!-- ==============================
+     ABOUT SECTION
+================================ -->
+
+<section id="about" class="about">
+
+
+    <div class="section-title">
+
+        <h2>About</h2>
+
+        <p>
+            Professional summary and my journey
+        </p>
+
+    </div>
+
+
+
+
+    <div class="about-container">
+
+
+
+        <!-- Profile Image -->
+
+        <div class="about-image">
+
+            <img src="assets/images/profile.jpg" alt="Profile Image">
+
+        </div>
+
+
+
+
+
+        <!-- About Content -->
+
+        <div class="about-content">
+
+
+            <h3>
+                Product Support Engineer | SaaS | Data Analysis | AI Enthusiast
+            </h3>
+
+
+
+            <p>
+                I am a Product Support Engineer with 7+ years of experience
+                working across SaaS, CPaaS and technology platforms.
+                My expertise includes troubleshooting complex technical
+                issues, analysing data, debugging integrations and
+                collaborating with engineering teams to improve products.
+            </p>
+
+
+
+            <p>
+                Throughout my career, I have worked on SDK integrations,
+                APIs, ETL workflows, customer account audits and large-scale
+                data investigations. I enjoy solving challenging problems
+                by combining technical knowledge with analytical thinking.
+            </p>
+
+
+
+            <p>
+                Currently, I am expanding my skills in Python, automation
+                and Artificial Intelligence to build intelligent solutions
+                and transition towards AI-driven engineering roles.
+            </p>
+
+
+
+
+            <div class="about-details">
+
+
+                <div>
+                    <strong>
+                        Experience
+                    </strong>
+
+                    <span>
+                        7+ Years
+                    </span>
+                </div>
+
+
+
+                <div>
+                    <strong>
+                        Domain
+                    </strong>
+
+                    <span>
+                        SaaS / CPaaS
+                    </span>
+                </div>
+                <div>
+                    <strong>
+                        Focus
+                    </strong>
+                    <span>
+                        AI & Automation
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==============================
+     CONTACT SECTION
+================================ -->
+
+<section id="contact" class="contact">
+
+
+    <div class="section-title">
+
+        <h2>Contact</h2>
+
+        <p>
+            Let's connect and discuss opportunities
+        </p>
+
+    </div>
+
+
+
+
+    <div class="contact-container">
+
+
+
+        <!-- Contact Information -->
+
+        <div class="contact-info">
+
+
+            <h3>
+                Get In Touch
+            </h3>
+
+
+            <p>
+                I am open to discussing technical opportunities,
+                collaboration, AI projects and interesting ideas.
+            </p>
+
+
+
+
+            <div class="contact-item">
+
+
+                <span>
+                    Email
+                </span>
+
+
+                <a href="mailto:your-email@example.com">
+                    your-email@example.com
+                </a>
+
+
+            </div>
+
+
+
+
+
+            <div class="contact-item">
+
+
+                <span>
+                    LinkedIn
+                </span>
+
+
+                <a href="#" target="_blank">
+                    LinkedIn Profile
+                </a>
+
+
+            </div>
+
+
+
+
+
+            <div class="contact-item">
+
+
+                <span>
+                    GitHub
+                </span>
+
+
+                <a href="#" target="_blank">
+                    GitHub Profile
+                </a>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <!-- Contact Form -->
+
+        <div class="contact-form">
+
+
+            <form>
+
+
+                <div class="form-group">
+
+                    <input 
+                        type="text"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                </div>
+
+
+
+
+
+                <div class="form-group">
+
+                    <input 
+                        type="email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                </div>
+
+
+
+
+
+                <div class="form-group">
+
+                    <input 
+                        type="text"
+                        placeholder="Subject"
+                        required
+                    >
+
+                </div>
+
+
+
+
+
+                <div class="form-group">
+
+                    <textarea 
+                        placeholder="Your Message"
+                        rows="6"
+                        required>
+                    </textarea>
+
+                </div>
+
+
+
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+
+
+            </form>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</section>
+
+<!-- ==============================
+     FOOTER SECTION
+================================ -->
+
+<footer class="footer">
+
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <h3>
+                Shahbaz Khan
+            </h3>
+
+            <p>
+                Product Support Engineer | SaaS | Data Analysis | AI Enthusiast
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="footer-links">
+
+
+            <a href="#about">
+                About
+            </a>
+
+
+            <a href="#experience">
+                Experience
+            </a>
+
+
+            <a href="#projects">
+                Projects
+            </a>
+
+
+            <a href="#contact">
+                Contact
+            </a>
+
+
+        </div>
+
+
+
+
+
+        <div class="footer-social">
+
+
+            <a href="#" target="_blank">
+                LinkedIn
+            </a>
+
+
+            <a href="#" target="_blank">
+                GitHub
+            </a>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <div class="footer-bottom">
+
+
+        <p>
+            © 2026 Shahbaz Khan. All Rights Reserved.
+        </p>
+
+
+    </div>
+
+
+
+</footer>
+
+<!-- ==============================
+     JAVASCRIPT
+================================ -->
+
+
+<script src="js/particles.js"></script>
+<script src="js/typing.js"></script>
+<script src="js/counter.js"></script>
+<script src="js/script.js"></script>
 
 </body>
+
+
 </html>
