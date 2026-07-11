@@ -1,0 +1,274 @@
+/* ==============================
+   PORTFOLIO ANIMATIONS
+================================ */
+
+
+/* Fade Up Animation */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(30px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* Fade In Animation */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity:0;
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+/* Slide From Left */
+
+@keyframes slideLeft {
+
+    from {
+
+        opacity:0;
+        transform:translateX(-50px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+
+
+/* Slide From Right */
+
+@keyframes slideRight {
+
+    from {
+
+        opacity:0;
+        transform:translateX(50px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+
+
+/* Scale Animation */
+
+@keyframes scaleIn {
+
+    from {
+
+        opacity:0;
+        transform:scale(.9);
+
+    }
+
+
+    to {
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+/* Floating Effect */
+
+@keyframes floating {
+
+    0% {
+
+        transform:translateY(0px);
+
+    }
+
+
+    50% {
+
+        transform:translateY(-10px);
+
+    }
+
+
+    100% {
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+
+
+
+
+/* ==============================
+   ANIMATION CLASSES
+================================ */
+
+
+.animate-fade {
+
+    animation:fadeIn .8s ease forwards;
+
+}
+
+
+
+.animate-up {
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+
+
+.animate-left {
+
+    animation:slideLeft .8s ease forwards;
+
+}
+
+
+
+.animate-right {
+
+    animation:slideRight .8s ease forwards;
+
+}
+
+
+
+.animate-scale {
+
+    animation:scaleIn .8s ease forwards;
+
+}
+
+
+
+.animate-floating {
+
+    animation:floating 3s ease-in-out infinite;
+
+}
+
+
+
+
+
+/* ==============================
+   CARD ANIMATIONS
+================================ */
+
+
+.timeline-content,
+.project-card,
+.qualification-card,
+.education-card,
+.highlight-card,
+.contact-form {
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+
+
+
+
+/* ==============================
+   HOVER TRANSITIONS
+================================ */
+
+
+.hover-lift {
+
+    transition:.3s ease;
+
+}
+
+
+
+.hover-lift:hover {
+
+    transform:translateY(-8px);
+
+}
+
+
+
+
+
+.hover-grow {
+
+    transition:.3s ease;
+
+}
+
+
+
+.hover-grow:hover {
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+/* ==============================
+   PAGE LOAD
+================================ */
+
+
+body {
+
+    animation:fadeIn .6s ease forwards;
+
+}
